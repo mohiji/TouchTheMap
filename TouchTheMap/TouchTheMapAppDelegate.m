@@ -14,54 +14,68 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    [self.window makeKeyAndVisible];
+    [_mapView setShowsUserLocation:YES];
+    
+    // Set up a gesture recognizer to let me catch taps.  I only want to catch single taps, which
+    // is kind of difficult.  In order for single taps to work, double taps have to fail.  I can't
+    // attach an empty double tap recognizer because it'll interfere with the MapView's internal 
+    // double tap recognizer, and then zooms won't work.
+    //
+    // What I'm doing here is grabbing a list of attached gesture recognizers and finding the internal
+    // double tap one, and then telling my single tap one that the double tap must fail
+    
+    UIGestureRecognizer *builtInDoubleTap = nil;
+    NSArray *gestureRecognizers = [_mapView gestureRecognizers];
+    for (UIGestureRecognizer *recognizer in gestureRecognizers) {
+        if ([recognizer class] == [UITapGestureRecognizer class]) {
+            if ([(UITapGestureRecognizer *)recognizer numberOfTapsRequired] == 2) {
+                NSLog(@"Found double tap recognizer: %@", recognizer);
+                builtInDoubleTap = recognizer;
+                break;
+            }
+        }
+    }
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleMapTap:)];
+    [tapGesture requireGestureRecognizerToFail:builtInDoubleTap];
+    [_mapView addGestureRecognizer:tapGesture];
+    [tapGesture release];
+
+    [[self window] makeKeyAndVisible];
     return YES;
-}
-
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    /*
-     Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-     Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-     */
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    /*
-     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-     If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-     */
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    /*
-     Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-     */
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    /*
-     Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-     */
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    /*
-     Called when the application is about to terminate.
-     Save data if appropriate.
-     See also applicationDidEnterBackground:.
-     */
 }
 
 - (void)dealloc
 {
+    [_mapView release];
     [_window release];
     [super dealloc];
+}
+
+#pragma mark MKMapViewDelegate methods
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+    CLLocationCoordinate2D loc = [userLocation coordinate];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, 250, 250);
+    [_mapView setRegion:region animated:YES];
+}
+
+#pragma mark UIGestureRecognizer targets
+- (void)handleMapTap:(id)sender
+{
+    UITapGestureRecognizer *tapGesture = (UITapGestureRecognizer*)sender;
+    
+    CGPoint tapPoint = [tapGesture locationInView:_mapView];
+    CLLocationCoordinate2D coord = [_mapView convertPoint:tapPoint toCoordinateFromView:_mapView];
+    
+    NSUInteger numberOfTouches = [tapGesture numberOfTouches];
+    
+    if (numberOfTouches == 1) {
+        NSLog(@"Tap location was %.0f, %.0f", tapPoint.x, tapPoint.y);
+        NSLog(@"World coordinate was longitude %f, latitude %f", coord.longitude, coord.latitude);
+    } else {
+        NSLog(@"Number of touches was %d, ignoring", numberOfTouches);
+    }
 }
 
 @end

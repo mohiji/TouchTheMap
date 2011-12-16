@@ -14,6 +14,9 @@
 		27F1F438149B04940030897C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F1F437149B04940030897C /* main.m */; };
 		27F1F43C149B04940030897C /* TouchTheMapAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F1F43B149B04940030897C /* TouchTheMapAppDelegate.m */; };
 		27F1F43F149B04940030897C /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27F1F43D149B04940030897C /* MainWindow.xib */; };
+		27F1F446149B05170030897C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F1F445149B05170030897C /* MapKit.framework */; };
+		27F1F448149B051C0030897C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F1F447149B051C0030897C /* CoreLocation.framework */; };
+		27F1F450149B0A750030897C /* map-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 27F1F44F149B0A750030897C /* map-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +24,16 @@
 		27F1F42B149B04940030897C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27F1F42D149B04940030897C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27F1F42F149B04940030897C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		27F1F433149B04940030897C /* TouchTheMap-Info.plist */ = {isa = PBXFileReference; path = "TouchTheMap-Info.plist"; sourceTree = "<group>"; };
+		27F1F433149B04940030897C /* TouchTheMap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TouchTheMap-Info.plist"; sourceTree = "<group>"; };
 		27F1F435149B04940030897C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		27F1F437149B04940030897C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		27F1F439149B04940030897C /* TouchTheMap-Prefix.pch */ = {isa = PBXFileReference; path = "TouchTheMap-Prefix.pch"; sourceTree = "<group>"; };
-		27F1F43A149B04940030897C /* TouchTheMapAppDelegate.h */ = {isa = PBXFileReference; path = TouchTheMapAppDelegate.h; sourceTree = "<group>"; };
+		27F1F439149B04940030897C /* TouchTheMap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TouchTheMap-Prefix.pch"; sourceTree = "<group>"; };
+		27F1F43A149B04940030897C /* TouchTheMapAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchTheMapAppDelegate.h; sourceTree = "<group>"; };
 		27F1F43B149B04940030897C /* TouchTheMapAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchTheMapAppDelegate.m; sourceTree = "<group>"; };
 		27F1F43E149B04940030897C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		27F1F445149B05170030897C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		27F1F447149B051C0030897C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		27F1F44F149B0A750030897C /* map-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "map-icon.png"; path = "../map-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F1F448149B051C0030897C /* CoreLocation.framework in Frameworks */,
+				27F1F446149B05170030897C /* MapKit.framework in Frameworks */,
 				27F1F42C149B04940030897C /* UIKit.framework in Frameworks */,
 				27F1F42E149B04940030897C /* Foundation.framework in Frameworks */,
 				27F1F430149B04940030897C /* CoreGraphics.framework in Frameworks */,
@@ -64,6 +72,8 @@
 		27F1F42A149B04940030897C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				27F1F447149B051C0030897C /* CoreLocation.framework */,
+				27F1F445149B05170030897C /* MapKit.framework */,
 				27F1F42B149B04940030897C /* UIKit.framework */,
 				27F1F42D149B04940030897C /* Foundation.framework */,
 				27F1F42F149B04940030897C /* CoreGraphics.framework */,
@@ -85,6 +95,7 @@
 		27F1F432149B04940030897C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				27F1F44F149B0A750030897C /* map-icon.png */,
 				27F1F433149B04940030897C /* TouchTheMap-Info.plist */,
 				27F1F434149B04940030897C /* InfoPlist.strings */,
 				27F1F437149B04940030897C /* main.m */,
@@ -142,6 +153,7 @@
 			files = (
 				27F1F436149B04940030897C /* InfoPlist.strings in Resources */,
 				27F1F43F149B04940030897C /* MainWindow.xib in Resources */,
+				27F1F450149B0A750030897C /* map-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +240,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TouchTheMap/TouchTheMap-Prefix.pch";
 				INFOPLIST_FILE = "TouchTheMap/TouchTheMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -239,6 +252,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TouchTheMap/TouchTheMap-Prefix.pch";
 				INFOPLIST_FILE = "TouchTheMap/TouchTheMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
