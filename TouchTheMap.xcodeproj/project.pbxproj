@@ -1,0 +1,270 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27F1F42C149B04940030897C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F1F42B149B04940030897C /* UIKit.framework */; };
+		27F1F42E149B04940030897C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F1F42D149B04940030897C /* Foundation.framework */; };
+		27F1F430149B04940030897C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F1F42F149B04940030897C /* CoreGraphics.framework */; };
+		27F1F436149B04940030897C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27F1F434149B04940030897C /* InfoPlist.strings */; };
+		27F1F438149B04940030897C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F1F437149B04940030897C /* main.m */; };
+		27F1F43C149B04940030897C /* TouchTheMapAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F1F43B149B04940030897C /* TouchTheMapAppDelegate.m */; };
+		27F1F43F149B04940030897C /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27F1F43D149B04940030897C /* MainWindow.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		27F1F427149B04940030897C /* TouchTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27F1F42B149B04940030897C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		27F1F42D149B04940030897C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		27F1F42F149B04940030897C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		27F1F433149B04940030897C /* TouchTheMap-Info.plist */ = {isa = PBXFileReference; path = "TouchTheMap-Info.plist"; sourceTree = "<group>"; };
+		27F1F435149B04940030897C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		27F1F437149B04940030897C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		27F1F439149B04940030897C /* TouchTheMap-Prefix.pch */ = {isa = PBXFileReference; path = "TouchTheMap-Prefix.pch"; sourceTree = "<group>"; };
+		27F1F43A149B04940030897C /* TouchTheMapAppDelegate.h */ = {isa = PBXFileReference; path = TouchTheMapAppDelegate.h; sourceTree = "<group>"; };
+		27F1F43B149B04940030897C /* TouchTheMapAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchTheMapAppDelegate.m; sourceTree = "<group>"; };
+		27F1F43E149B04940030897C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27F1F424149B04940030897C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27F1F42C149B04940030897C /* UIKit.framework in Frameworks */,
+				27F1F42E149B04940030897C /* Foundation.framework in Frameworks */,
+				27F1F430149B04940030897C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27F1F41C149B04930030897C = {
+			isa = PBXGroup;
+			children = (
+				27F1F431149B04940030897C /* TouchTheMap */,
+				27F1F42A149B04940030897C /* Frameworks */,
+				27F1F428149B04940030897C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27F1F428149B04940030897C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27F1F427149B04940030897C /* TouchTheMap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27F1F42A149B04940030897C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27F1F42B149B04940030897C /* UIKit.framework */,
+				27F1F42D149B04940030897C /* Foundation.framework */,
+				27F1F42F149B04940030897C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27F1F431149B04940030897C /* TouchTheMap */ = {
+			isa = PBXGroup;
+			children = (
+				27F1F43A149B04940030897C /* TouchTheMapAppDelegate.h */,
+				27F1F43B149B04940030897C /* TouchTheMapAppDelegate.m */,
+				27F1F43D149B04940030897C /* MainWindow.xib */,
+				27F1F432149B04940030897C /* Supporting Files */,
+			);
+			path = TouchTheMap;
+			sourceTree = "<group>";
+		};
+		27F1F432149B04940030897C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27F1F433149B04940030897C /* TouchTheMap-Info.plist */,
+				27F1F434149B04940030897C /* InfoPlist.strings */,
+				27F1F437149B04940030897C /* main.m */,
+				27F1F439149B04940030897C /* TouchTheMap-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27F1F426149B04940030897C /* TouchTheMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27F1F442149B04940030897C /* Build configuration list for PBXNativeTarget "TouchTheMap" */;
+			buildPhases = (
+				27F1F423149B04940030897C /* Sources */,
+				27F1F424149B04940030897C /* Frameworks */,
+				27F1F425149B04940030897C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TouchTheMap;
+			productName = TouchTheMap;
+			productReference = 27F1F427149B04940030897C /* TouchTheMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27F1F41E149B04930030897C /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 27F1F421149B04930030897C /* Build configuration list for PBXProject "TouchTheMap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 27F1F41C149B04930030897C;
+			productRefGroup = 27F1F428149B04940030897C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27F1F426149B04940030897C /* TouchTheMap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27F1F425149B04940030897C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27F1F436149B04940030897C /* InfoPlist.strings in Resources */,
+				27F1F43F149B04940030897C /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27F1F423149B04940030897C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27F1F438149B04940030897C /* main.m in Sources */,
+				27F1F43C149B04940030897C /* TouchTheMapAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		27F1F434149B04940030897C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27F1F435149B04940030897C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		27F1F43D149B04940030897C /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27F1F43E149B04940030897C /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27F1F440149B04940030897C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		27F1F441149B04940030897C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27F1F443149B04940030897C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TouchTheMap/TouchTheMap-Prefix.pch";
+				INFOPLIST_FILE = "TouchTheMap/TouchTheMap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		27F1F444149B04940030897C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TouchTheMap/TouchTheMap-Prefix.pch";
+				INFOPLIST_FILE = "TouchTheMap/TouchTheMap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27F1F421149B04930030897C /* Build configuration list for PBXProject "TouchTheMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27F1F440149B04940030897C /* Debug */,
+				27F1F441149B04940030897C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27F1F442149B04940030897C /* Build configuration list for PBXNativeTarget "TouchTheMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27F1F443149B04940030897C /* Debug */,
+				27F1F444149B04940030897C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27F1F41E149B04930030897C /* Project object */;
+}
